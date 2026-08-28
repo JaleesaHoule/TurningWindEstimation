@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "turningwindestimation"
+version = "0.1.0"
+description = "Observability/constructability vs. estimation for turning wind-direction estimation (fly / drone)."
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+license = { file = "LICENSE" }
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "pandas>=2.0",
+    "matplotlib>=3.7",
+    "casadi>=3.6",
+    "do-mpc>=5.0",
+    "keras>=3.0",
+    "tensorflow>=2.16",
+    "pybounds>=0.1.0",
+]
+
+# The notebook GUI in twe/observability_gui.py is optional; the analysis scripts
+# use only the compute engine, so ipywidgets/IPython are an opt-in extra.
+[project.optional-dependencies]
+gui = ["ipywidgets>=8.0", "ipython>=8.0"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["twe"]
