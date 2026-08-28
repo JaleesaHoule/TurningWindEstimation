@@ -224,7 +224,7 @@ __marimo__/
 .streamlit/secrets.toml
 
 # --- generated analysis outputs (regenerate by running the scripts) ---
-analysis_output/
+#analysis_output/
 # keep the trained/vendored networks:
 !ANNmodels/
 !ANNmodels/**
